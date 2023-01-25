@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <title>Flex</title>
+</head>
+<body>
+
+    <h1>Display flex</h1>
+    <h2>Flex Direction</h2>
+    <h3>Flex-direction</h3>
+    <p>Flex direction por defecto viene con el valor de row</p>
+    <p>solo sus hijos directos se ven afectados</p>
+    <P>Agregar <b>display:flex</b> al contenedor en el .css</P>
+
+    <div class="container">
+
+        <div class="item-1">LOGO</div>
+        <div class="item-2">MENU</div>
+        <div class="item-3">BUSQUEDA</div>
+        <div class="item-4">LOGIN</div>
+
+    </div>
+    <p>Row se refiere a que los elementos se organizan de manera horizonta se usa <b>flex-direction:row;</b> y es la que viene por defecto</p>
+    <p>De izquierda a derecha</p>
+    <p>La opcion <b>    flex-direction:row reverse;</b> los organiza de manera invertida de izquierda a derecha</p>
+
+    <div class="container-row-reverse">
+
+        <div class="item-1">LOGO</div>
+        <div class="item-2">MENU</div>
+        <div class="item-3">BUSQUEDA</div>
+        <div class="item-4">LOGIN</div>
+
+    </div>
+
+    <p>Los elementos se pueden presentar en forma de columna vertical</p>
+    <p>Si ponemos a <b>flex-direction:column</b> el valor de  column</p>
+
+
+    <div class="container-column">
+
+        <div class="item-1">LOGO</div>
+        <div class="item-2">MENU</div>
+        <div class="item-3">BUSQUEDA</div>
+        <div class="item-4">LOGIN</div>
+
+    </div>
+
+    <p>Si ponemos a <b>flex-direction:column-reverse</b> se organizan de modo horizontal invirtiendo el orden de los items</p>
+
+    <div class="container-column-reverse">
+
+        <div class="item-1">LOGO</div>
+        <div class="item-2">MENU</div>
+        <div class="item-3">BUSQUEDA</div>
+        <div class="item-4">LOGIN</div>
+        
+
+    </div>
+    <h2>flex-wrap</h2>
+
+    <p>La propiedad <b>flex-wrap:wrap</b> si se activa lo que hace es hacer que los elementos contenidos items <br> avarquen todo el contenedor </p>
+    <p> Es decir si añadimos mas elementos, estos se ajustan para que todos entren dentro del contenedor si llegan al final del contenedor saltaran para ocupar otra linea</p>
+
+    <div class="container-flex-wrap">
+
+        <div class="item-1">LOGO</div>
+        <div class="item-2">MENU</div>
+        <div class="item-3">BUSQUEDA</div>
+        <div class="item-4">LOGIN</div>
+        <div class="item-4">OTHER</div>
+
+    </div>
+
+    <p>Si usamos la opcion <b>flex-wrap: no-wrap</b></p>
+    <p>todos los elementos buscarar conservarse en la misma linea, si se excede del tamaño del contenador se desbordaran</p>
+    <p>Es la que viene por defecto</p>
+
+    <div class="container-flex-no-wrap">
+
+        <div class="item-1">LOGO</div>
+        <div class="item-2">MENU</div>
+        <div class="item-3">BUSQUEDA</div>
+        <div class="item-4">LOGIN</div>
+        <div class="item-4">OTHER</div>
+
+    </div>
+
+    <p>Tambien existe la opcion de <b>flex-wrap:wrap-reverse</b> , que invierte el orden</p>
+    
+    <div class="container-flex-wrap-reverse">
+
+        <div class="item-1">LOGO</div>
+        <div class="item-2">MENU</div>
+        <div class="item-3">BUSQUEDA</div>
+        <div class="item-4">LOGIN</div>
+        <div class="item-4">OTHER</div>
+
+    </div>
+
+    <p>La opcion <b>flex-flow</b> simplifica usar las dos propiedades <b>flex-direction</b> y <b>flex-wrap</b></p>
+    <p>flex-flow:[flex-direction][flex-wrap]</p>
+    <p>para este caso <b>flex-flow:row wrap</b></p>
+    
+
+
+    <div class="container-flex-flow">
+
+        <div class="item-1">LOGO</div>
+        <div class="item-2">MENU</div>
+        <div class="item-3">BUSQUEDA</div>
+        <div class="item-4">LOGIN</div>
+        <div class="item-4">OTHER</div>
+
+    </div>
+
+    <h1>Alineacion en el eje x sentido horizontal (main axis)</h1>
+    <h2>justify-content</h2>
+
+    <p><b>justify-content:flex-start;</b> alinea a la izquierda los elementos</p>
+
+    <div class="container-justify-content-start">
+
+        <div class="item-1">LOGO</div>
+        <div class="item-2">MENU</div>
+        <div class="item-3">BUSQUEDA</div>
+        <div class="item-4">LOGIN</div>
+        
+
+    </div>
+
+    <p> <b>justify-content:center;</b> alinea a la derecha los elementos</p>
+
+    <div class="container-justify-content-end">
+
+        <div class="item-1">LOGO</div>
+        <div class="item-2">MENU</div>
+        <div class="item-3">BUSQUEDA</div>
+        <div class="item-4">LOGIN</div>
+        
+
+    </div>
+
+    <p><b>justify-content:center;</b> alinea al centro los elementos</p>
+
+    <div class="container-justify-content-center">
+
+        <div class="item-1">LOGO</div>
+        <div class="item-2">MENU</div>
+        <div class="item-3">BUSQUEDA</div>
+        <div class="item-4">LOGIN</div>
+        
+
+    </div>
+
+    <p><b>justify-content:space-between;</b> alinea los elementos dejando espacios distantes entre cada uno de ellos, pero no el mismo espacio a las margenes</p>
+
+    <div class="container-justify-content-space-between">
+
+        <div class="item-1">LOGO</div>
+        <div class="item-2">MENU</div>
+        <div class="item-3">BUSQUEDA</div>
+        <div class="item-4">LOGIN</div>
+        
+
+    </div>
+
+    <p><b>justify-content:space-around;</b> alinea los elementos dejando espacios distantes entre cada uno de ellos, y un espacio no igual a las margenes</p>
+
+    <div class="container-justify-content-space-around">
+
+        <div class="item-1">LOGO</div>
+        <div class="item-2">MENU</div>
+        <div class="item-3">BUSQUEDA</div>
+        <div class="item-4">LOGIN</div>
+        
+
+    </div>
+
+    <p><b>justify-content:space-evenly;</b> alinea los elementos dejando espacios distantes entre cada uno de ellos, y uno igual a las margenes</p>
+
+    <div class="container-justify-content-space-evenly">
+
+        <div class="item-1">LOGO</div>
+        <div class="item-2">MENU</div>
+        <div class="item-3">BUSQUEDA</div>
+        <div class="item-4">LOGIN</div>
+        
+
+    </div>
+
+    <h1>Alineacion en el eje y sentido vertical(cross axis)</h1>
+    <h2>align-items</h2>
+    <p>El valor por defecto es flex-start es decir <b>align-items:flex-start;</b> Alinea en la parte superior del contenedor</p>
+
+    <div class="container-align-items-start">
+
+        <div class="item-1-cross-axis">LOGO</div>
+        <div class="item-1-cross-axis">MENU</div>
+        <div class="item-1-cross-axis">BUSQUEDA</div>
+        <div class="item-1-cross-axis">LOGIN</div>
+        
+
+    </div>
+
+    <b>align-items:flex-end;</b> Alinea en la parte inferior del contenedor</p>
+    <div class="container-align-items-end">
+
+        <div class="item-1-cross-axis">LOGO</div>
+        <div class="item-1-cross-axis">MENU</div>
+        <div class="item-1-cross-axis">BUSQUEDA</div>
+        <div class="item-1-cross-axis">LOGIN</div>
+        
+
+    </div>
+
+    <b>align-items:center;</b> Alinea en la parte central del contenedor</p>
+    <div class="container-align-items-center">
+
+        <div class="item-1-cross-axis">LOGO</div>
+        <div class="item-1-cross-axis">MENU</div>
+        <div class="item-1-cross-axis">BUSQUEDA</div>
+        <div class="item-1-cross-axis">LOGIN</div>
+        
+
+    </div>
+
+    <b>align-items:stretch;</b>Los elementos ocupan todo el espacio de arriba hacia abajo es necesario que cada uno de los items que contiene no tenga una medida de alto fija</p>
+    <div class="container-align-items-stretch">
+
+        <div class="item-1-cross-axis-stretch">LOGO</div>
+        <div class="item-1-cross-axis-stretch">MENU</div>
+        <div class="item-1-cross-axis-stretch">BUSQUEDA</div>
+        <div class="item-1-cross-axis-stretch">LOGIN</div>
+        
+
+    </div>
+
+    <b>align-items:baseLine;</b>Los elementos ocupan el espacio con respecto a una linea imaginaria que es generalmente donde aparece el texto que los cruza justo a la mitad</p>
+    <p>Por eso si le doy un tamaño diferente a cada contenedor se alinearan al texto y ademas debo darle margin a uno de los items para que los demas se alinen</p>
+
+    <div class="container-align-items-baseLine">
+
+        <div class="item-1-cross-axis-baseLine">LOGO</div>
+        <div class="item-2-cross-axis-baseLine">MENU</div>
+        <div class="item-3-cross-axis-baseLine">BUSQUEDA</div>
+        <div class="item-4-cross-axis-baseLine">LOGIN</div>
+        
+
+    </div>
+
+    <h1>Align-content</h1>
+    <h2>Permite alinear dentro de la caja varios items internos</h2>
+    <p>Se necesitan dos condiciones que <b> flex-flow tenga valor de wrap o wrap-reverse</b> </p>
+    <p>y que  exista mas de una linea</p>
+    <p>Y en el css usar las dos lineas:</p>
+    <p><b>flex-flow: row wrap;<br>
+        align-content: flex-start;</b></p>
+
+    <div class="container-align-content-start">
+
+        <div class="item-1-align-content-start">LOGO</div>
+        <div class="item-1-align-content-start">MENU</div>
+        <div class="item-1-align-content-start">BUSQUEDA</div>
+        <div class="item-1-align-content-start">LOGIN</div>
+        <div class="item-1-align-content-start">OTHER</div>
+        <div class="item-1-align-content-start">OTHER</div>
+        <div class="item-1-align-content-start">OTHER</div>
+        <div class="item-1-align-content-start">OTHER</div>
+
+
+    </div>
+
+    <p>Se necesitan dos condiciones que <b> flex-flow tenga valor de wrap o wrap-reverse</b> </p>
+    <p>y que  exista mas de una linea</p>
+    <p>Y en el css usar las dos lineas:</p>
+    <p><b>flex-flow: row wrap;<br>
+        align-content: flex-end;</b></p>
+
+    <div class="container-align-content-end">
+
+        <div class="item-1-align-content-start">LOGO</div>
+        <div class="item-1-align-content-start">MENU</div>
+        <div class="item-1-align-content-start">BUSQUEDA</div>
+        <div class="item-1-align-content-start">LOGIN</div>
+        <div class="item-1-align-content-start">OTHER</div>
+        <div class="item-1-align-content-start">OTHER</div>
+        <div class="item-1-align-content-start">OTHER</div>
+        <div class="item-1-align-content-start">OTHER</div>
+
+
+    </div>
+
+</div>
+
+<p>Se necesitan dos condiciones que <b> flex-flow tenga valor de wrap o wrap-reverse</b> </p>
+<p>y que  exista mas de una linea</p>
+<p>Y en el css usar las dos lineas:</p>
+<p><b>flex-flow: row wrap;<br>
+    align-content: center;</b></p>
+
+<div class="container-align-content-center">
+
+    <div class="item-1-align-content-start">LOGO</div>
+    <div class="item-1-align-content-start">MENU</div>
+    <div class="item-1-align-content-start">BUSQUEDA</div>
+    <div class="item-1-align-content-start">LOGIN</div>
+    <div class="item-1-align-content-start">OTHER</div>
+    <div class="item-1-align-content-start">OTHER</div>
+    <div class="item-1-align-content-start">OTHER</div>
+    <div class="item-1-align-content-start">OTHER</div>
+
+
+</div>
+
+    <p>Se necesitan dos condiciones que <b> flex-flow tenga valor de wrap o wrap-reverse</b> </p>
+    <p>y que  exista mas de una linea</p>
+    <p>Y en el css usar las dos lineas:</p>
+    <p><b>flex-flow: row wrap;<br>
+        align-content: stretch;</b></p>
+
+    <div class="container-align-content-stretch">
+
+        <div class="item-1-align-content-stretch">LOGO</div>
+        <div class="item-2-align-content-stretch">MENU</div>
+        <div class="item-3-align-content-stretch">BUSQUEDA</div>
+        <div class="item-4-align-content-stretch">LOGIN</div>
+        <div class="item-5-align-content-stretch">OTHER</div>
+        <div class="item-6-align-content-stretch">OTHER</div>
+        
+
+
+    </div>
+
+</div>
+
+<p>Se necesitan dos condiciones que <b> flex-flow tenga valor de wrap o wrap-reverse</b> </p>
+<p>y que  exista mas de una linea</p>
+<p>Y en el css usar las dos lineas:</p>
+<p><b>flex-flow: row wrap;<br>
+    align-content: space-between;</b></p>
+
+<div class="container-align-content-space-between">
+
+    <div class="item-1-align-content-space-between">LOGO</div>
+    <div class="item-1-align-content-space-between">MENU</div>
+    <div class="item-1-align-content-space-between">BUSQUEDA</div>
+    <div class="item-1-align-content-space-between">LOGIN</div>
+    <div class="item-1-align-content-space-between">OTHER</div>
+    <div class="item-1-align-content-space-between">OTHER</div>
+    <div class="item-1-align-content-space-between">BUSQUEDA</div>
+    <div class="item-1-align-content-space-between">BUSQUEDA</div>
+    <div class="item-1-align-content-space-between">BUSQUEDA</div>
+    <div class="item-1-align-content-space-between">BUSQUEDA</div>
+    
+
+
+</div>
+
+<p>Se necesitan dos condiciones que <b> flex-flow tenga valor de wrap o wrap-reverse</b> </p>
+<p>y que  exista mas de una linea</p>
+<p>Y en el css usar las dos lineas:</p>
+<p><b>flex-flow: row wrap;<br>
+    align-content: space-around;</b></p>
+
+<div class="container-align-content-space-around">
+
+    <div class="item-1-align-content-space-between">LOGO</div>
+    <div class="item-1-align-content-space-between">MENU</div>
+    <div class="item-1-align-content-space-between">BUSQUEDA</div>
+    <div class="item-1-align-content-space-between">LOGIN</div>
+    <div class="item-1-align-content-space-between">OTHER</div>
+    <div class="item-1-align-content-space-between">OTHER</div>
+    <div class="item-1-align-content-space-between">BUSQUEDA</div>
+    <div class="item-1-align-content-space-between">BUSQUEDA</div>
+    <div class="item-1-align-content-space-between">BUSQUEDA</div>
+    <div class="item-1-align-content-space-between">BUSQUEDA</div>
+    
+
+
+</div>
+
+<p>Tambien se puede usar  <b>gap</b> </p>
+<p>lo que hace es agregar espacio entre los elementos de un contenedor es decir entere sus items, </p>br> este solo aplica entre elementos no genera borde en el contenedor</p>
+<p>Y en el css usar las lineas:</p>
+<p><b>gap: 10px;<br>
+    es decir gap y los pixeles de espaciado que queramos  usar</b></p>
+
+    <div class="container-gap">
+
+        <div class="item-1-align-content-space-between">BUSQUEDA</div>
+        <div class="item-1-align-content-space-between">LOGO</div>
+        <div class="item-1-align-content-space-between">MENU</div>
+        <div class="item-1-align-content-space-between">BUSQUEDA</div>
+        <div class="item-1-align-content-space-between">LOGIN</div>
+        <div class="item-1-align-content-space-between">OTHER</div>
+        <div class="item-1-align-content-space-between">OTHER</div>
+        
+    
+    </div>
+
+    <h2>La propiedad order</h2>
+    <p>nos permite usarla cundo hacemos responsive, la propiedad order permite manipular el orden</p>
+    <p>Se aplica a cada item, es decir que se aplica dentro del item</p>
+    <p>se usan las lines <br> order:1; <br> es decir order y el valor </p>
+    <p>el orden por defecto empieza por el 0 y va aumentando</p>
+
+    <div class="container-order">
+
+        <div class="item-order-1">SOY 1</div>
+        <div class="item-order-2">SOY 2</div>
+        <div class="item-order-3">SOY 3</div>
+        
+        
+    
+    </div>
+
+
+
+
+
+</body>
+</html>   
+
